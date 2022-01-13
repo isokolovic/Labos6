@@ -16,5 +16,14 @@ namespace MyLibrary
         {
             InitializeComponent();
         }
+
+        //Kad se pokrene aplikacija, inicijalizira se glavna forma i dodaje se Login forma
+        protected override void OnShown(EventArgs e)
+        {
+            base.OnShown(e);
+
+            Login login = new Login();
+            login.Show(this);
+        }
     }
 }
