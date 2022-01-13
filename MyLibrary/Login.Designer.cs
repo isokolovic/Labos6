@@ -59,6 +59,7 @@ namespace MyLibrary
             this.textBoxpassword.Name = "textBoxpassword";
             this.textBoxpassword.Size = new System.Drawing.Size(100, 20);
             this.textBoxpassword.TabIndex = 3;
+            this.textBoxpassword.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -81,6 +82,7 @@ namespace MyLibrary
             // 
             // buttonCancel
             // 
+            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancel.Location = new System.Drawing.Point(114, 116);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);

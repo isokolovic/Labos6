@@ -13,6 +13,8 @@ namespace MyLibrary
 {
     public partial class Login : Form
     {
+        public event EventHandler UserLoggedIn;
+
         public Login()
         {
             InitializeComponent();
@@ -46,6 +48,13 @@ namespace MyLibrary
         {
             if (UserIsValid())
             {
+                //Ako postoji netko tko sluša event
+                if(UserLoggedIn != null)
+                {
+                    //Dižemo prazan event (EventArgs.Empty)
+                    UserLoggedIn(this, EventArgs.Empty);
+                }
+
                 Close();
                 return;
             }
